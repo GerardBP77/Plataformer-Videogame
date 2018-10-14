@@ -17,8 +17,6 @@
 #include "j1Particles.h"
 #include "j1Player.h"
 #include "Time.h"
-#include "j1Scene_Forest.h"
-#include "j1Scene_Winter.h"
 
 
 // Constructor
@@ -39,8 +37,6 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	fadeToBlack = new j1FadeToBlack();
 	particles = new j1Particles();
 	time = new Timer();
-	map_forest = new j1Scene_Forest();
-	map_winter = new j1Scene_Winter();
 
 	// Ordered for awake / Start / Update
 	// Reverse order of CleanUp
@@ -51,13 +47,10 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	AddModule(audio);
 	AddModule(map);
 	AddModule(scene);
-	AddModule(map_forest);
-	AddModule(map_winter);
 	AddModule(fadeToBlack);
 	AddModule(particles);
 	AddModule(collision);
 	AddModule(player);
-
 	
 	AddModule(time);
 

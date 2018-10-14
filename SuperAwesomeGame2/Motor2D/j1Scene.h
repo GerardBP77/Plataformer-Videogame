@@ -32,8 +32,6 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	void SetAllColliders();
-
 	const char* level = "Level2.tmx";
 	bool a = true;
 
